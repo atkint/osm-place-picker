@@ -128,7 +128,7 @@ export default {
           var addressField = { key: key, value: value, enabled: true };
           //console.log(value)
           if (key == "country_code") {
-            addressField.disabled = false;
+            addressField.enabled = false;
           }
           this.table_values.push(addressField);
         }

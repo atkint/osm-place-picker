@@ -1,6 +1,5 @@
 <template>
   <b-container>
-    <NominatimDataFields v-if="map_marker" :map_marker="map_marker" />
     <!-- basic 
     <v-icon name="baidu" color="blue" />
     <v-icon name="brands/wikipedia-w" color="black" />
@@ -16,21 +15,16 @@
           </b-col>
           <b-col>
             <b-input-group prepend="Lat" class="mb-2">
-              <b-form-input
-                type="number"
-                v-bind:value="lat"
-                disabled
-              ></b-form-input>
+              <b-form-input type="number" v-bind:value="lat" disabled></b-form-input>
             </b-input-group>
-            <b-input-group prepend="Lng" class="mb-2"
-              ><b-form-input
-                type="number"
-                v-bind:value="lng"
-                disabled
-              ></b-form-input
-            ></b-input-group>
+            <b-input-group prepend="Lng" class="mb-2">
+              <b-form-input type="number" v-bind:value="lng" disabled></b-form-input>
+            </b-input-group>
           </b-col>
         </b-row>
+      </b-card>
+      <b-card>
+        <NominatimDataFields v-if="map_marker" :map_marker="map_marker" />
       </b-card>
       <b-card>
         <b-row>
